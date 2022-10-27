@@ -1,16 +1,19 @@
-import { useEffect } from 'react'
-import axios from 'axios'
+import Quiz from './Quiz'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => {
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get('/api/products/') // * <-- replace with your endpoint
-      console.log(data)
-    }
-    getData()
-  })
-
-  return <h1>Hello World</h1>
+  return (
+    <>
+      <div className="site-wrapper">
+        <BrowserRouter>
+          <Routes>
+            <Route path = "/" element= {< Quiz />}/>
+          </Routes>
+          {/* <PageFooter/> */}
+        </BrowserRouter>
+      </div>
+    </>
+  )
 }
 
 export default App
