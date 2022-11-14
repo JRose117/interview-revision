@@ -82,6 +82,10 @@ export const orderedQuestions = [
 {
   Question:"What is a function?",
   Answer:"A function is simply a “chunk” of code that you can use over and over again, rather than writing it out multiple times."
+},
+{
+  Question:"What is the difference between SQL and NoSQL?",
+  Answer:"SQL databases are vertically scalable, while NoSQL databases are horizontally scalable. SQL databases are table-based, while NoSQL databases are document, key-value, graph, or wide-column stores. SQL databases are better for multi-row transactions, while NoSQL is better for unstructured data like documents or JSON"
 }
 ]
 
