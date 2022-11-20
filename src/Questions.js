@@ -86,6 +86,10 @@ export const orderedQuestions = [
 {
   Question:"What is the difference between SQL and NoSQL?",
   Answer:"SQL databases are vertically scalable, while NoSQL databases are horizontally scalable. SQL databases are table-based, while NoSQL databases are document, key-value, graph, or wide-column stores. SQL databases are better for multi-row transactions, while NoSQL is better for unstructured data like documents or JSON"
+},
+{
+  Question: "What is the difference between a Method and a Function",
+  Answer: "A method is a procedure or function in OOPs Concepts. Whereas, a function is a group of reusable code which can be used anywhere in the program"
 }
 ]
 
