@@ -5,10 +5,36 @@
 .Buttons {
   display: flex;
   justify-content: space-around;
+  }
+
+button:hover{
+    cursor: pointer;
 }
 
 .Top {
   height: 80vh
+}
+
+button#no, button#yes {
+  height: 30px;
+  width: 30px;
+  border: black;
+  border-radius: 8px;
+}
+
+button#no {
+  background: lightcoral
+}
+
+button#yes {
+  background: lightgreen
+}
+
+button#no:hover{
+  background: red
+}
+button#yes:hover{
+  background: green
 }
 
 

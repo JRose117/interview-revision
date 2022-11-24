@@ -41,7 +41,7 @@ export const orderedQuestions = [
 },
 {
   Question:"What are the new functionalities in ES6?",
-  Answer:"Let vs Var ,Arrow functions ,Multi line with back-ticks ,Removed semi-colons ,Use of switches is becoming deprecated ,Template Literals ,Destructuring Assignment ,Promises ,Classes ,Modules https://www.boardinfinity.com/blog/top-10-features-of-es6/"
+  Answer:"Let vs Var, Arrow functions, Multi line with back-ticks, Removed semi-colons, Use of switches is becoming deprecated, Template Literals, Destructuring Assignment, Promises, Classes, Modules https://www.boardinfinity.com/blog/top-10-features-of-es6/"
 },
 {
   Question:"What are the advantages of one-way binding (e.g React or Vue)?",

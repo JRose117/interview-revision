@@ -67,13 +67,13 @@ return(
     <div className ="Bottom">
       <div className="Buttons">
         <div className="answerButtons">
-          <button name="wrong" disabled={disable} value="no" id="no" onClick={handleButtonClick} >✕</button>
+          <button name="wrong" disabled={disable} value="no" id="no" onClick={handleButtonClick} ></button>
         </div>
         <div className="showAnswer">
-          <button name="reveal" disabled={disable} value="reveal" id="reveal" onClick={revealAnswer} >reveal answer</button>
+          <button name="reveal" disabled={disable} value="reveal" id="reveal" onClick={revealAnswer} >Reveal Answer</button>
         </div>
         <div className="answerButtons">
-          <button name="correct" disabled={disable} value="yes" id="yes" onClick={handleButtonClick}>✔️</button>
+          <button name="correct" disabled={disable} value="yes" id="yes" onClick={handleButtonClick}></button>
         </div>
       </div>
       <h3> You have got {count} out of {orderedQuestions.length} correct so far!</h3>
