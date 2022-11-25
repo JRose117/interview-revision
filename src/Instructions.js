@@ -16,7 +16,7 @@ const revealAnswer = () => {
   if (redReveal){
     return}
     else{
-    setDemo(<> <h1>Now you've clicked reveal answer, you can see if you were right.</h1> 
+    setDemo(<> <h1>Once you've clicked reveal answer, you will be able to see if you were right.</h1> 
                 <h3> If you were wrong then click the RED button and the question will re-enter the pool of questions. </h3> 
                 <h3> Try pressing the RED button now! </h3></>)
     setRedReveal(true)
