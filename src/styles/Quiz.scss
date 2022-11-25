@@ -37,6 +37,26 @@ button#yes:hover{
   background: green
 }
 
+h2{
+    width: 90%;
+    height: 60%;
+    overflow: scroll;
+    margin: 0 auto;
+    overflow-x: hidden;
+    margin-top: 40px;
+  }
+
+@media (min-width: 768px){
+  h2{
+    height: 70%;
+  }
+}
+
+@media (max-height: 500px){
+  h2 {
+    height: 35%;
+  }
+}
 
 
 

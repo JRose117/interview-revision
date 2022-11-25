@@ -1,0 +1,77 @@
+import React from 'react'
+import { useState } from "react"
+import { Link } from 'react-router-dom'
+
+
+const Instructions = () => {
+
+const [reveal, setReveal] = useState(true)
+const [redReveal, setRedReveal] = useState (false)
+const [greenReveal, setGreenReveal] = useState (false)
+const [demo, setDemo] = useState(<><h1> On this website, you'll be given a series of self-assessment technical style interview questions. </h1>
+<h3> Think of your answer and find out if you were right by clicking reveal answer </h3>
+<h3> Try pressing reveal answer now! </h3></>)
+const revealAnswer = () => {
+  if (redReveal){
+    return}
+    else{
+    setDemo(<> <h1>Now you've clicked reveal answer, you can see if you were right.</h1> 
+                <h3> If you were wrong then click the RED button and the question will re-enter the pool of questions. </h3> 
+                <h3> Try pressing the RED button now! </h3></>)
+    setRedReveal(true)
+  }
+}
+
+const handleButtonClick = () => {
+  if (greenReveal) {
+    return
+  } else {
+  setDemo(<> <h1> If you were correct, then click the Green button. </h1> 
+  <h3> Once you've clicked the Green button, the question will be removed from the pool of questions and you won't be asked it again until you refresh the page. </h3> 
+  <h3> Try pressing the GREEN button now! </h3></>)
+setGreenReveal(true)
+}
+}
+const handleButtonGreen = () => {
+  setDemo(<> <h1> This Demo is Over, Refresh the page to start the Demo again. </h1>
+  <h2> or click Start to begin! </h2> <Link to="/quiz">
+  <button> Start Quiz </button>
+</Link> </>
+)
+
+  setRedReveal(false)
+  setGreenReveal(false)
+  setReveal (false)
+}
+
+
+return( 
+  <>
+      <Link to="/quiz">
+        <button> Skip Demo </button>
+      </Link>
+    <div className="Top">
+      {demo}
+    </div>
+    <div className="red">
+
+    </div>
+    <div className ="Bottom">
+      <div className="Buttons">
+        <div className="answerButtons">
+          {redReveal && <button name="wrong" value="no" id="no" onClick={handleButtonClick} ></button>}
+        </div>
+        <div className="showAnswer">
+          {reveal && <button name="revealDemo" value="revealDemo" id="revealDemo" onClick={revealAnswer} > Reveal Answer </button>}
+        </div>
+        <div className="answerButtons">
+          {greenReveal && <button name="correct" value="yes" id="yes" onClick={handleButtonGreen}></button>}
+        </div>
+      </div>
+      </div>
+
+  </>
+)
+}
+
+export default Instructions
