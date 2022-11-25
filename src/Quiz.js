@@ -7,10 +7,15 @@ const Quiz = () => {
 const [questions, setQuestions] = useState(orderedQuestions)
 const [reveal, setReveal] = useState(false)
 const [count, setCount] = useState(0)
-const [disable, setDisable] = useState(false);
-
+const [disable, setDisable] = useState(false)
+const [buttonText, setButtonText] = useState ('Reveal Answer')
 const revealAnswer = () => {
     setReveal(reveal => !reveal)
+    if (buttonText === 'Reveal Answer'){
+      setButtonText('Hide Answer')      
+    } else {
+      setButtonText('Reveal Answer')
+    }
 }
 
 const handleRefresh = () => {
@@ -70,7 +75,7 @@ return(
           <button name="wrong" disabled={disable} value="no" id="no" onClick={handleButtonClick} ></button>
         </div>
         <div className="showAnswer">
-          <button name="reveal" disabled={disable} value="reveal" id="reveal" onClick={revealAnswer} >Reveal Answer</button>
+          <button name="reveal" disabled={disable} value="reveal" id="reveal" onClick={revealAnswer} >{buttonText}</button>
         </div>
         <div className="answerButtons">
           <button name="correct" disabled={disable} value="yes" id="yes" onClick={handleButtonClick}></button>
