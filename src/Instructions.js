@@ -8,7 +8,7 @@ const Instructions = () => {
 const [reveal, setReveal] = useState(true)
 const [redReveal, setRedReveal] = useState (false)
 const [greenReveal, setGreenReveal] = useState (false)
-const [demo, setDemo] = useState(<><h1> On this website, you'll be given a series of self-assessment technical style interview questions. </h1>
+const [demo, setDemo] = useState(<><h1> On this website, you will be given a series of self-assessment technical style interview questions. </h1>
 <h3> Think of your answer and find out if you were right by clicking reveal answer </h3>
 <h3> Try pressing reveal answer now! </h3></>)
 const revealAnswer = () => {
