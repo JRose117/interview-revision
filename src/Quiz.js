@@ -43,6 +43,7 @@ useLayoutEffect(() => {
 console.log(questions)
 
 const handleButtonClick = (event) => {
+  setButtonText('Reveal Answer')
   if(event.target.name === "correct") {
     if (questions.length === 1){
       console.log("1")
