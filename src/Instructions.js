@@ -10,7 +10,8 @@ const [redReveal, setRedReveal] = useState (false)
 const [greenReveal, setGreenReveal] = useState (false)
 const [demo, setDemo] = useState(<><h1> On this website, you will be given a series of self-assessment technical style interview questions. </h1>
 <h3> Think of your answer and find out if you were right by clicking reveal answer </h3>
-<h3> Try pressing reveal answer now! </h3></>)
+<h3> Try pressing reveal answer now! </h3>
+<h4> Or click <Link to="/quiz"><span className="Skip">here</span></Link> to skip the demo </h4></>)
 const revealAnswer = () => {
   if (redReveal){
     return}
@@ -47,9 +48,6 @@ const handleButtonGreen = () => {
 
 return( 
   <>
-      <Link to="/quiz">
-        <button> Skip Demo </button>
-      </Link>
     <div className="Top">
       {demo}
     </div>
@@ -67,6 +65,9 @@ return(
         <div className="answerButtons">
           {greenReveal && <button name="correct" value="yes" id="yes" onClick={handleButtonGreen}></button>}
         </div>
+      </div>
+      <div className="Skip">
+    
       </div>
       </div>
 
