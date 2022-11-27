@@ -7,7 +7,7 @@ const Instructions = () => {
 
 const [reveal, setReveal] = useState(true)
 const [redReveal, setRedReveal] = useState (false)
-const [greenReveal, setGreenReveal] = useState (false)
+const [yellowReveal, setYellowReveal] = useState (false)
 const [demo, setDemo] = useState(<><h1> On this website, you will be given a series of self-assessment technical style interview questions. </h1>
 <h3> Think of your answer and find out if you were right by clicking reveal answer </h3>
 <h3> Try pressing reveal answer now! </h3>
@@ -24,16 +24,16 @@ const revealAnswer = () => {
 }
 
 const handleButtonClick = () => {
-  if (greenReveal) {
+  if (yellowReveal) {
     return
   } else {
-  setDemo(<> <h1> If you were correct, then click the Green button. </h1> 
-  <h3> Once you've clicked the Green button, the question will be removed from the pool of questions and you won't be asked it again until you refresh the page. </h3> 
-  <h3> Try pressing the GREEN button now! </h3></>)
-setGreenReveal(true)
+  setDemo(<> <h1> If you were correct, then click the YELLOW button. </h1> 
+  <h3> Once you've clicked the YELLOW button, the question will be removed from the pool of questions and you won't be asked it again until you refresh the page. </h3> 
+  <h3> Try pressing the YELLOW button now! </h3></>)
+setYellowReveal(true)
 }
 }
-const handleButtonGreen = () => {
+const handleButtonYellow = () => {
   setDemo(<> <h1> This Demo is Over, Refresh the page to start the Demo again. </h1>
   <h2> or click Start to begin! </h2> <Link to="/quiz">
   <button> Start Quiz </button>
@@ -41,7 +41,7 @@ const handleButtonGreen = () => {
 )
 
   setRedReveal(false)
-  setGreenReveal(false)
+  setYellowReveal(false)
   setReveal (false)
 }
 
@@ -63,7 +63,7 @@ return(
           {reveal && <button name="revealDemo" value="revealDemo" id="revealDemo" onClick={revealAnswer} > Reveal Answer </button>}
         </div>
         <div className="answerButtons">
-          {greenReveal && <button name="correct" value="yes" id="yes" onClick={handleButtonGreen}></button>}
+          {yellowReveal && <button name="correct" value="yes" id="yes" onClick={handleButtonYellow}></button>}
         </div>
       </div>
       <div className="Skip">

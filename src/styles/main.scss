@@ -1,5 +1,6 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300&display=swap');* {
+  font-family: 'sora', sans-serif;
   box-sizing: border-box;
 }
 @import 'Instructions.scss';
-@import 'Quiz.scss'
+@import 'Quiz.scss';

@@ -2,6 +2,27 @@
   text-align: center;
 }
 
+// html{
+//   width: 100%;
+//   height: 100vh;
+//   background: linear-gradient(
+//     to top,
+//     lightgreen 0%,
+//     lightgreen 50%,
+//     lightgreen 50%,
+//     lightgreen 100%
+//   )
+// }
+
+
+.main{ 
+  width:100vw;
+  height:100vh;
+  margin: 0 auto;
+  background: lightgreen
+}
+
+body { margin: 0 auto}
 .Buttons {
   display: flex;
   justify-content: space-around;
@@ -23,18 +44,22 @@ button#no, button#yes {
 }
 
 button#no {
-  background: lightcoral
+  background: red;
+  border: solid 2px black;
 }
 
 button#yes {
-  background: lightgreen
+  background: #CCCC00;
+  border: solid 2px black;
 }
 
 button#no:hover{
-  background: red
+  background: lightcoral;
+  border: solid 2px black;
 }
 button#yes:hover{
-  background: green
+  background: #FADA5E;
+  border: solid 2px black;
 }
 
 h2{
@@ -44,6 +69,22 @@ h2{
     margin: 0 auto;
     overflow-x: hidden;
     margin-top: 40px;
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  h1{
+    font-size:25px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .h2-background {
+    background-color: #32CD32;
+  }
+
+  .h2-no-background {
+    background-color: lightgreen
   }
 
 @media (min-width: 768px){
