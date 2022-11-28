@@ -48,29 +48,30 @@ const handleButtonYellow = () => {
 
 return( 
   <>
-    <div className="Top">
-      {demo}
-    </div>
-    <div className="red">
+    <div className="main">
+      <div className="Top">
+        {demo}
+      </div>
+      <div className="red">
 
-    </div>
-    <div className ="Bottom">
-      <div className="Buttons">
-        <div className="answerButtons">
-          {redReveal && <button name="wrong" value="no" id="no" onClick={handleButtonClick} ></button>}
+      </div>
+      <div className ="Bottom">
+        <div className="Buttons">
+          <div className="answerButtons">
+            {redReveal && <button name="wrong" value="no" id="no" onClick={handleButtonClick} ></button>}
+          </div>
+          <div className="showAnswer">
+            {reveal && <button name="revealDemo" value="revealDemo" id="revealDemo" onClick={revealAnswer} > Reveal Answer </button>}
+          </div>
+          <div className="answerButtons">
+            {yellowReveal && <button name="correct" value="yes" id="yes" onClick={handleButtonYellow}></button>}
+          </div>
         </div>
-        <div className="showAnswer">
-          {reveal && <button name="revealDemo" value="revealDemo" id="revealDemo" onClick={revealAnswer} > Reveal Answer </button>}
+        <div className="Skip">
+      
         </div>
-        <div className="answerButtons">
-          {yellowReveal && <button name="correct" value="yes" id="yes" onClick={handleButtonYellow}></button>}
         </div>
       </div>
-      <div className="Skip">
-    
-      </div>
-      </div>
-
   </>
 )
 }
