@@ -9,7 +9,7 @@ const Quiz = () => {
   const [count, setCount] = useState(0)
   const [disable, setDisable] = useState(false)
   const [buttonText, setButtonText] = useState('Reveal Answer')
-  const [h2Background, setH2Background] = useState("'blue'")
+  const [h2Background, setH2Background] = useState("")
   const [mainBackground, setMainBackground] = useState (100)
 
   const mainBackgroundCalc = () => {
@@ -21,7 +21,7 @@ const Quiz = () => {
 
   const revealAnswer = () => {
     setReveal(reveal => !reveal)
-    setH2Background(h2Background === '#32CD32' ? 'transparent' : '#32CD32');
+    setH2Background(h2Background === '#3792cb' ? 'transparent' : '#3792cb');
 
     if (buttonText === 'Reveal Answer') {
       setButtonText('Hide Answer')
@@ -78,10 +78,10 @@ const Quiz = () => {
   }
 
   return (
-    <div className="green" style={{backgroundColor: "lightgreen"}}>
+    <div className="green" style={{backgroundColor: "#77b5d9"}}>
       <div className="main" style={{
         height: `calc(${mainBackground}vh)`,
-        backgroundColor: "white",
+        backgroundColor: `#d7eaf3`,
       }}
 >
         <div className="Top">
@@ -97,8 +97,8 @@ const Quiz = () => {
               <button name="wrong" disabled={disable} value="no" id="no" onClick={handleButtonClick} ></button>
             </div>
             <div className="showAnswer">
-            {disable ? <button name="refresh" value="refresh" id="refresh" onClick={handleRefresh}> Refresh </button> :
-              <button name="reveal" value="reveal" id="reveal" onClick={revealAnswer} >{buttonText}</button>}
+            {disable ? <button name="refresh" value="refresh" id="refresh" onClick={handleRefresh} style={{backgroundColor:'#3792cb'}}> Refresh </button> :
+              <button name="reveal" value="reveal" id="reveal" onClick={revealAnswer} style={{backgroundColor:'#3792cb'}}>{buttonText}</button>}
             </div>
             <div className="answerButtons">
               <button name="correct" disabled={disable} value="yes" id="yes" onClick={handleButtonClick}></button>
