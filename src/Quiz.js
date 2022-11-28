@@ -90,7 +90,6 @@ const Quiz = () => {
             backgroundColor: h2Background,
           }}>
             {reveal && questions[0].Answer}</h2>
-          {disable && <button name="refresh" value="refresh" id="refresh" onClick={handleRefresh}> Refresh </button>}
         </div>
         <div className="Bottom">
           <div className="Buttons">
@@ -98,7 +97,8 @@ const Quiz = () => {
               <button name="wrong" disabled={disable} value="no" id="no" onClick={handleButtonClick} ></button>
             </div>
             <div className="showAnswer">
-              <button name="reveal" disabled={disable} value="reveal" id="reveal" onClick={revealAnswer} >{buttonText}</button>
+            {disable ? <button name="refresh" value="refresh" id="refresh" onClick={handleRefresh}> Refresh </button> :
+              <button name="reveal" value="reveal" id="reveal" onClick={revealAnswer} >{buttonText}</button>}
             </div>
             <div className="answerButtons">
               <button name="correct" disabled={disable} value="yes" id="yes" onClick={handleButtonClick}></button>
