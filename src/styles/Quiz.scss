@@ -95,7 +95,12 @@ h2{
     font-size: 20px;
     border-radius: 10px;
     padding: 10px;
+    color: black
 }
+
+  button#refresh {
+    color: black
+  }
 
 @media (min-width: 768px){
   h2{
