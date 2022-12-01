@@ -90,6 +90,10 @@ export const orderedQuestions = [
 {
   Question: "What is the difference between a Method and a Function",
   Answer: "A method is a procedure or function in OOPs Concepts. Whereas, a function is a group of reusable code which can be used anywhere in the program"
+},
+{
+  Question: "What are hooks in React?",
+  Answer:"Hooks are a feature in React that allow you use state and other React features without writing classes - example of hooks are useState and useEffect"
 }
 ]
 
