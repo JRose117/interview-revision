@@ -95,6 +95,11 @@ export const orderedQuestions = [
   Question: "What are hooks in React?",
   Answer:"Hooks are a feature in React that allow you use state and other React features without writing classes - example of hooks are useState and useEffect"
 }
+// {
+//   Question: "What are the main benefits of typescript?",
+//   Answer:"Don't forget to +1 in total in quiz.js"
+// }
+
 ]
 
 
