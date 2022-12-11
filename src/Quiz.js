@@ -13,7 +13,7 @@ const Quiz = () => {
   const [mainBackground, setMainBackground] = useState (100)
 
   const mainBackgroundCalc = () => {
-    const percentageCalc = 100/24
+    const percentageCalc = 100/26
     setMainBackground(mainBackground-percentageCalc)
   }
   
