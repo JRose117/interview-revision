@@ -22,12 +22,7 @@ const Quiz = () => {
   const revealAnswer = () => {
     setReveal(reveal => !reveal)
     setH2Background(h2Background === '#3792cb' ? 'transparent' : '#3792cb');
-
-    if (buttonText === 'Reveal Answer') {
-      setButtonText('Hide Answer')
-    } else {
-      setButtonText('Reveal Answer')
-    }
+    setButtonText(buttonText=== 'Reveal Answer' ? 'Hide Answer' : 'Reveal Answer')
   }
 
   const handleRefresh = () => {
